@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<!--main testing node-->
+  <node pkg="label_data_serilize" type="serilize_demo"  name="serilize_demo"  output="screen" >
+    <param name="key_path" value="$(find label_data_serilize)/key" />
+    <param name="pcap" value="/home/leezonpen/RSlidardata/lm146_170730_roadtest.pcap" />
+    <param name="ethernet_name" value="eth1" />	
+    <param name="args_path" value="$(find label_data_serilize)/usr_args/16.xml" />
+    <param name="lidar_config_path" value="$(find label_data_serilize)/usr_args/align.txt" />
+    <param name="pcd_label_path" value="/home/leezonpen/share/label/16/normal" />
+    <param name="save_path" value="/home/leezonpen/data/RS-16/autoAlign/" />
+  </node>
+
+</launch>
